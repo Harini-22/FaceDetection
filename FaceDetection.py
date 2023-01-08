@@ -5,8 +5,8 @@ haar_cascade=cv2.CascadeClassifier(alg)    #loading xml file with cv2
 
 cam=cv2.VideoCapture(0)   #initializing camera
 
-while True:
-	_,img=cam.read()
+while True:  #infinte loop
+	_,img=cam.read()  #read the frames of the camera
 	grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)     #convert img into gray image
 	face = haar_cascade.detectMultiScale(grayImg, 1.3, 4)
 	for (x,y,w,h) in face:  #coordinates of face
